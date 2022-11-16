@@ -1,0 +1,25 @@
+<div class="container mt-5 m-auto img">
+  <div><h1><%= @flat.name %></h1></div>
+  <div><img class="img" src=<%= @flat.img_source %>></div>
+  <div><%= @flat.address %></div>
+  <div><%= @flat.description %></div>
+  <div><%= @flat.price_per_night %></div>
+  <div><%= @flat.number_of_guests %></div>
+</div>
+
+<div class="img m-auto">
+  <%= link_to "Edit this Flat", edit_flat_path(@flat) %> |
+  <%= link_to "Back to Flats", flats_path %>
+  <%= button_to "Destroy this Flat", @flat, method: :delete %>
+</div>
+
+<%# <div><%= link_to "Leave a review", new_flat_review_path(@flat)</div> %>
+
+<%# <div>
+  <% @flat.reviews.each do |review| %>
+    <%# <h3 class="p-3 mb-2">
+      <%= review.content %>
+      <%# <%= link_to "Delete", review_path(review), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%# </h3>
+  <% end %>
+<%# </div> %>
